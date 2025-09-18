@@ -10,7 +10,7 @@ Portfólio criado para uso pessoal e controle de projetos. Versão constantement
 </p>
 
 <p align="center">
-  <img alt="License" src="https://i.ibb.co/0P2WZRz/port.png">
+  <img alt="License" src="https://i.ibb.co/hx9fvfnW/port.png">
 </p>
 
 ## 🚀 Tecnologias
