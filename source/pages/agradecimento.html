@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@initpedro | Thanks!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!--   <link rel="stylesheet" href="../stylesheets/css/style.css"> -->
+    <link rel="shortcut icon" href="../images/phfer-rounded.png" type="image" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out,
+          filter 0.8s ease-out;
+        font-family: "Arial", sans-serif;
+        user-select: none;
+      }
+
+      body {
+        height: 100vh;
+        background-color: hsl(0, 0%, 0%);
+        font-family: "Arial", sans-serif;
+        animation: background_color 15s 0.875s cubic-bezier(0.9, 0, 0.1, 1)
+          forwards;
+        margin: 0;
+        pointer-events: none;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+
+      @keyframes background_color {
+        6.66% {
+          background-color: hsl(0, 0%, 0%);
+        }
+        13.33% {
+          background-color: hsl(256, 55%, 20%);
+        }
+        20% {
+          background-color: hsl(271, 58%, 52%);
+        }
+        26.66% {
+          background-color: hsl(271, 68%, 52%);
+        }
+        33.33% {
+          background-color: hsl(266, 100%, 61%);
+        }
+        40% {
+          background-color: hsl(271, 68%, 52%);
+        }
+        46.66% {
+          background-color: hsl(271, 58%, 52%);
+        }
+        53.33% {
+          background-color: hsl(271, 58%, 52%);
+        }
+        60% {
+          background-color: hsl(271, 58%, 52%);
+        }
+        66.66% {
+          background-color: hsl(640, 80%, 60%);
+        }
+        73.33% {
+          background-color: hsl(256, 55%, 20%);
+        }
+        80% {
+          background-color: hsl(0, 0%, 0%);
+        }
+        86.66% {
+          background-color: hsl(256, 55%, 20%);
+        }
+        93.33% {
+          background-color: hsl(271, 58%, 52%);
+        }
+        100% {
+          background-color: hsl(271, 68%, 52%);
+        }
+      }
+
+      div.timer {
+        width: 75vmin;
+        height: 75vmin;
+        box-shadow: 0 0 0 1.875vmin,
+          inset 3.75vmin 3.75vmin 7.5vmin rgba(0, 0, 0, 0.125),
+          3.75vmin 3.75vmin 7.5vmin rgba(0, 0, 0, 0.125);
+        font-size: 37.5vmin;
+        text-shadow: 3.75vmin 3.75vmin 7.5vmin rgba(0, 0, 0, 0.125);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        color: white;
+        border-radius: 50%;
+        font-weight: 700;
+        width: 25vmin;
+        height: 25vmin;
+        font-size: 20vmin;
+      }
+
+      @media (min-width: 600px) {
+        div.timer {
+          width: 20vmin;
+          height: 20vmin;
+          font-size: 15vmin;
+        }
+      }
+
+      .timer::before {
+        content: "4";
+        animation: timer_countdown 4s 1s forwards, timer_beat 1s 1s 4;
+      }
+
+      @keyframes timer_beat {
+        40%,
+        80% {
+          transform: none;
+        }
+        50% {
+          transform: scale(1.125);
+        }
+      }
+
+      @keyframes timer_countdown {
+        0% {
+          content: "4";
+        }
+        25% {
+          content: "3";
+        }
+        50% {
+          content: "2";
+        }
+        75% {
+          content: "1";
+        }
+        100% {
+          content: "0";
+        }
+      }
+
+      .timer::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -100;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.493);
+        animation: timer_indicator 4s 1s linear forwards;
+      }
+
+      @keyframes timer_indicator {
+        100% {
+          transform: translateY(100%);
+        }
+      }
+
+      .mensagem {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        /* text-align: center; */
+        font-size: 1em;
+        color: white;
+        font-weight: 500;
+        z-index: 10;
+        max-width: 600px;
+        position: left;
+      }
+
+      .mensagem strong {
+        font-size: 46px;
+        line-height: 48px;
+      }
+
+      P {
+        margin-top: 20px;
+        margin-bottom: 25px;
+      }
+
+      body.loaded {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mensagem">
+      <strong>Obrigado pela mensagem!</strong><br />
+      <p>Você será redirecionado em:</p>
+    </div>
+    <div class="timer"></div>
+
+    <script>
+      setTimeout(() => {
+        window.location.href = "https://phfer.vercel.app"
+      }, 5000)
+    </script>
+  </body>
+</html>
