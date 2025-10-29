@@ -20,7 +20,7 @@ const translations = {
     
     // Hero
     "hero.title1": "Especialista em",
-    "hero.title2": "Desenvolvimento de",
+    "hero.title2": "Desenvolver",
     "hero.title3": "para o seu negócio!",
     "hero.description": "Grandes ideias ganham asas quando criadas por devs criativos e dedicados.",
     "hero.button1": "Conheça meu trabalho",
@@ -89,6 +89,7 @@ const translations = {
     "skill.dotnet": "Plataforma .NET Microsoft",
     "skill.python": "Linguagem versátil e clara",
     "skill.java": "Linguagem orientada a objetos",
+    "skill.api": "Integração entre sistemas",
     "skill.apis": "Integração entre sistemas",
     "skill.postgresql": "Banco de dados relacional",
     "skill.mysql": "Banco de dados SQL popular",
@@ -327,6 +328,7 @@ const translations = {
     "skill.dotnet": "Microsoft .NET platform",
     "skill.python": "Versatile and clear language",
     "skill.java": "Object-oriented language",
+    "skill.api": "System integration",
     "skill.apis": "System integration",
     "skill.postgresql": "Relational database",
     "skill.mysql": "Popular SQL database",

@@ -98,7 +98,7 @@ export function HeroSection() {
               {language === "pt" ? "Especialista em" : "Specialist in"}
             </span>
             <span className="block bg-linear-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
-              {language === "pt" ? "Desenvolvimento de" : "Systems"} {displayText}
+              {language === "pt" ? "Desenvolver" : "Systems"} {displayText}
               <span className="animate-pulse text-primary">|</span>
             </span>
             <span className="block">

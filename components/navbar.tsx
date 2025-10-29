@@ -48,13 +48,13 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 w-11/12 md:w-fit transition-all duration-300 ${
+      className={`fixed top-0 left-1/2 -translate-x-1/2 md:left-auto md:top-4 md:translate-x-0 z-50 w-full md:w-fit transition-all duration-300 ${
         isScrolled
-          ? "bg-background/90 backdrop-blur-xl border border-primary/20 shadow-lg"
-          : "bg-background/60 backdrop-blur-md border border-primary/10"
-      } rounded-full`}
+          ? "md:bg-background/90 md:backdrop-blur-xl md:border md:border-primary/20 md:shadow-lg"
+          : "md:bg-background/60 md:backdrop-blur-md md:border md:border-primary/10"
+      } md:rounded-full`}
     >
-      <div className="px-6 md:px-8 py-3">
+      <div className="px-6 md:px-8 py-4 md:py-3">
         <div className="flex items-center justify-between gap-8">
           <a href="#home" className="text-lg font-bold text-primary whitespace-nowrap" onClick={(e) => handleNavClick(e, "#home")}>
             @initpedro

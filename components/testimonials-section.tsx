@@ -9,27 +9,6 @@ export function TestimonialsSection() {
   
   const testimonials = [
     {
-      name: "Victor Hugo",
-      role: t("testimonial1.role"),
-      company: t("testimonial1.company"),
-      content: t("testimonial1.content"),
-      avatar: "👨‍💻",
-    },
-    {
-      name: "Miguel Eustáquio",
-      role: t("testimonial2.role"),
-      company: t("testimonial2.company"),
-      content: t("testimonial2.content"),
-      avatar: "👨‍💼",
-    },
-    {
-      name: "Luís Miguel",
-      role: t("testimonial3.role"),
-      company: t("testimonial3.company"),
-      content: t("testimonial3.content"),
-      avatar: "👨‍💻",
-    },
-    {
       name: "Júlia Reis",
       role: t("testimonial4.role"),
       company: t("testimonial4.company"),
@@ -63,6 +42,27 @@ export function TestimonialsSection() {
       company: t("testimonial4.company"),
       content: t("testimonial4.content"),
       avatar: "👩‍💻",
+    },
+    {
+      name: "Victor Hugo",
+      role: t("testimonial1.role"),
+      company: t("testimonial1.company"),
+      content: t("testimonial1.content"),
+      avatar: "👨‍💻",
+    },
+    {
+      name: "Miguel Eustáquio",
+      role: t("testimonial2.role"),
+      company: t("testimonial2.company"),
+      content: t("testimonial2.content"),
+      avatar: "👨‍💼",
+    },
+    {
+      name: "Luís Miguel",
+      role: t("testimonial3.role"),
+      company: t("testimonial3.company"),
+      content: t("testimonial3.content"),
+      avatar: "👨‍💻",
     },
   ]
   
@@ -112,6 +112,12 @@ export function TestimonialsSection() {
             
             .testimonials-scroll:hover {
               animation-play-state: paused;
+            }
+            
+            @media (max-width: 768px) {
+              .testimonials-scroll {
+                animation: scroll-testimonials 5.33s linear infinite;
+              }
             }
           `}</style>
 
