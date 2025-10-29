@@ -48,7 +48,7 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-1/2 -translate-x-1/2 md:left-1/2 md:top-4 md:-translate-x-1/2 z-50 w-full md:w-fit transition-all duration-300 ${
+      className={`fixed top-0 left-1/2 -translate-x-1/2 md:left-1/2 md:top-4 md:-translate-x-1/2 z-50 w-full md:w-fit transition-all duration-300 bg-background/95 backdrop-blur-md md:bg-transparent ${
         isScrolled
           ? "md:bg-background/90 md:backdrop-blur-xl md:border md:border-primary/20 md:shadow-lg"
           : "md:bg-background/60 md:backdrop-blur-md md:border md:border-primary/10"
