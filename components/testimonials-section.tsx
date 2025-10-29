@@ -4,6 +4,14 @@ import { Badge } from "@/components/ui/badge"
 import { Star } from "lucide-react"
 import { useLanguage } from "@/components/language-provider"
 
+type Testimonial = {
+  name: string
+  role: string
+  company: string
+  content: string
+  avatar: string
+}
+
 export function TestimonialsSection() {
   const { t } = useLanguage()
   
@@ -138,7 +146,7 @@ export function TestimonialsSection() {
   )
 }
 
-function TestimonialCard({ testimonial }: { testimonial: (typeof testimonials)[0] }) {
+function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   return (
     <div className="relative p-8 rounded-2xl border border-border/50 backdrop-blur-sm bg-card/30 hover:border-primary/50 transition-all duration-300 group min-w-[400px] md:min-w-[450px]">
       {/* Top accent line */}

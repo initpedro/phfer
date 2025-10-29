@@ -48,19 +48,20 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-1/2 -translate-x-1/2 md:left-auto md:top-4 md:translate-x-0 z-50 w-full md:w-fit transition-all duration-300 ${
+      className={`fixed top-0 left-1/2 -translate-x-1/2 md:left-1/2 md:top-4 md:-translate-x-1/2 z-50 w-full md:w-fit transition-all duration-300 ${
         isScrolled
           ? "md:bg-background/90 md:backdrop-blur-xl md:border md:border-primary/20 md:shadow-lg"
           : "md:bg-background/60 md:backdrop-blur-md md:border md:border-primary/10"
       } md:rounded-full`}
     >
-      <div className="px-6 md:px-8 py-4 md:py-3">
-        <div className="flex items-center justify-between gap-8">
-          <a href="#home" className="text-lg font-bold text-primary whitespace-nowrap" onClick={(e) => handleNavClick(e, "#home")}>
+      <div className="px-6 md:px-6 py-4 md:py-3">
+        <div className="flex items-center justify-between gap-6 md:gap-8">
+          {/* Logo */}
+          <a href="#home" className="text-lg font-bold text-primary whitespace-nowrap shrink-0" onClick={(e) => handleNavClick(e, "#home")}>
             @initpedro
           </a>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation - Centered */}
           <div className="hidden md:flex items-center gap-2">
             {navLinks.map((link) => (
               <a
@@ -72,8 +73,11 @@ export function Navbar() {
                 {t(link.labelKey)}
               </a>
             ))}
-            
-            <div className="w-px h-6 bg-border mx-2"></div>
+          </div>
+
+          {/* Desktop Controls */}
+          <div className="hidden md:flex items-center gap-2">
+            <div className="w-px h-6 bg-border"></div>
 
             {/* Language Dropdown */}
             <DropdownMenu>
