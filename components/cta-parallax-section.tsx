@@ -72,7 +72,7 @@ export function CTAParallaxSection() {
 
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 text-balance">
               {t("cta.ready_to_level_up")} <br className="hidden md:block" />
-              {t("cta.ready_to_level_up_question")}
+              {t("cta.ready_to_level_up_question")}{" "}
               <span className="relative inline-block">
                 {t("cta.ready_to_level_up_answer")}
                 <span className="absolute -bottom-2 left-0 right-0 h-1 bg-white/30 rounded-full"></span>

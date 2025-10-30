@@ -15,20 +15,20 @@ type Testimonial = {
 export function TestimonialsSection() {
   const { t } = useLanguage()
   
-  const testimonials = [
-    {
-      name: "Júlia Reis",
-      role: t("testimonial4.role"),
-      company: t("testimonial4.company"),
-      content: t("testimonial4.content"),
-      avatar: "👩‍💻",
-    },
+  const originalTestimonials = [
     {
       name: "Victor Hugo",
       role: t("testimonial1.role"),
       company: t("testimonial1.company"),
       content: t("testimonial1.content"),
       avatar: "👨‍💻",
+    },
+    {
+      name: "Júlia Reis",
+      role: t("testimonial4.role"),
+      company: t("testimonial4.company"),
+      content: t("testimonial4.content"),
+      avatar: "👩‍💻",
     },
     {
       name: "Miguel Eustáquio",
@@ -45,34 +45,16 @@ export function TestimonialsSection() {
       avatar: "👨‍💻",
     },
     {
-      name: "Júlia Reis",
-      role: t("testimonial4.role"),
-      company: t("testimonial4.company"),
-      content: t("testimonial4.content"),
-      avatar: "👩‍💻",
-    },
-    {
-      name: "Victor Hugo",
-      role: t("testimonial1.role"),
-      company: t("testimonial1.company"),
-      content: t("testimonial1.content"),
-      avatar: "👨‍💻",
-    },
-    {
-      name: "Miguel Eustáquio",
-      role: t("testimonial2.role"),
-      company: t("testimonial2.company"),
-      content: t("testimonial2.content"),
-      avatar: "👨‍💼",
-    },
-    {
-      name: "Luís Miguel",
-      role: t("testimonial3.role"),
-      company: t("testimonial3.company"),
-      content: t("testimonial3.content"),
-      avatar: "👨‍💻",
+      name: "Amanda Luiza",
+      role: t("testimonial5.role"),
+      company: t("testimonial5.company"),
+      content: t("testimonial5.content"),
+      avatar: "👩‍⚕️",
     },
   ]
+
+  // Triple the testimonials for smooth loop
+  const testimonials = [...originalTestimonials, ...originalTestimonials, ...originalTestimonials]
   
   return (
     <section id="testimonials" className="py-24 relative overflow-hidden">
@@ -110,12 +92,14 @@ export function TestimonialsSection() {
                 transform: translateX(0);
               }
               100% {
-                transform: translateX(-50%);
+                transform: translateX(-66.666%);
               }
             }
             
             .testimonials-scroll {
-              animation: scroll-testimonials 8s linear infinite;
+              animation: scroll-testimonials 24s linear infinite;
+              display: flex;
+              gap: 2rem;
             }
             
             .testimonials-scroll:hover {
@@ -124,20 +108,15 @@ export function TestimonialsSection() {
             
             @media (max-width: 768px) {
               .testimonials-scroll {
-                animation: scroll-testimonials 5.33s linear infinite;
+                animation: scroll-testimonials 16s linear infinite;
               }
             }
           `}</style>
 
-          <div className="testimonials-scroll flex gap-8">
-            {/* Original testimonials */}
+          <div className="testimonials-scroll">
+            {/* All testimonials repeated for smooth infinite loop */}
             {testimonials.map((testimonial, index) => (
-              <TestimonialCard key={`original-${index}`} testimonial={testimonial} />
-            ))}
-
-            {/* Duplicate testimonials for seamless loop */}
-            {testimonials.map((testimonial, index) => (
-              <TestimonialCard key={`duplicate-${index}`} testimonial={testimonial} />
+              <TestimonialCard key={`testimonial-${index}`} testimonial={testimonial} />
             ))}
           </div>
         </div>

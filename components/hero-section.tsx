@@ -7,7 +7,7 @@ import { useLanguage } from "@/components/language-provider"
 
 const rotatingWords = {
   pt: ["Sistemas", "Software"],
-  en: ["Systems", "Software"],
+  en: ["Systems", "Applications"],
 }
 
 export function HeroSection() {
@@ -98,7 +98,7 @@ export function HeroSection() {
               {language === "pt" ? "Especialista em" : "Specialist in"}
             </span>
             <span className="block bg-linear-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
-              {language === "pt" ? "Desenvolver" : "Systems"} {displayText}
+              {language === "pt" ? "Desenvolver" : "Build"} {displayText}
               <span className="animate-pulse text-primary">|</span>
             </span>
             <span className="block">

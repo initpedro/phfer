@@ -47,9 +47,11 @@ const filterOptions = [
 export function SkillsSection() {
   const [filter, setFilter] = useState<SkillCategory>("all")
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null)
+  const [isExpanded, setIsExpanded] = useState(false)
   const { t } = useLanguage()
 
   const filteredSkills = skills.filter((skill) => filter === "all" || skill.category === filter)
+  const displayedSkills = isExpanded ? filteredSkills : filteredSkills.slice(0, 2)
 
   return (
     <section id="skills" className="py-24 relative overflow-hidden">
@@ -95,7 +97,7 @@ export function SkillsSection() {
           {/* Right Skills Grid */}
           <div className="flex-1">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredSkills.map((skill) => (
+              {displayedSkills.map((skill) => (
                 <div
                   key={skill.name}
                   onMouseEnter={() => setHoveredSkill(skill.name)}
@@ -144,6 +146,18 @@ export function SkillsSection() {
             {filteredSkills.length === 0 && (
               <div className="text-center py-12">
                 <p className="text-muted-foreground text-lg">{t("skills.no_skills_found")}</p>
+              </div>
+            )}
+
+            {/* See More / Collapse Button */}
+            {filteredSkills.length > 2 && (
+              <div className="flex justify-center mt-8">
+                <button
+                  onClick={() => setIsExpanded(!isExpanded)}
+                  className="px-8 py-3 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary border border-primary/30 hover:border-primary/50 font-semibold transition-all duration-300 active:scale-95"
+                >
+                  {isExpanded ? t("skills.see_less") || "Ver Menos" : t("skills.see_more") || "Ver Mais"} ({isExpanded ? filteredSkills.length : `2/${filteredSkills.length}`})
+                </button>
               </div>
             )}
           </div>

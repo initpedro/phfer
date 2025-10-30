@@ -73,6 +73,8 @@ const translations = {
     "skills.category.back": "Backend",
     "skills.category.other": "Ferramentas",
     "skills.no_skills_found": "Nenhuma habilidade encontrada.",
+    "skills.see_more": "Ver Mais",
+    "skills.see_less": "Ver Menos",
     
     // Skill Descriptions
     "skill.html5": "Estrutura semântica e acessível",
@@ -195,6 +197,11 @@ const translations = {
     "testimonial4.company": "Autônoma",
     "testimonial4.content": "Pedro é um desenvolvedor muito competente e atencioso. Suas dicas sobre boas práticas em TypeScript e C# foram fundamentais para melhorar minha qualidade de código. Sempre disposto a ajudar e compartilhar experiências.",
     
+    // Testimonial 5
+    "testimonial5.role": "Farmacêutica",
+    "testimonial5.company": "Armazém Drogaria",
+    "testimonial5.content": "Pedro foi fundamental para me auxiliar a entender e aprender os sistemas. Sua paciência e dedicação em explicar as funcionalidades de forma clara e objetiva tornaram o processo muito mais fácil. Excelente profissional!",
+    
     // FAQ Section
     "faq.badge": "Dúvidas Frequentes",
     "faq.title": "Tem",
@@ -225,6 +232,7 @@ const translations = {
     "final.title": "Vamos criar algo",
     "final.title2": "incrível juntos?",
     "final.description": "Tenho certeza de que podemos transformar suas ideias em soluções digitais extraordinárias.",
+    "final.cta": "Começar Agora",
     
     // Contact Section
     "contact.badge": "Vamos conversar!",
@@ -251,6 +259,9 @@ const translations = {
     "footer.about": "Sobre",
     "footer.projects": "Projetos",
     "footer.footer_cta_description": "Estou pronto para transformar suas ideias em realidade. ✨",
+    // Footer CTA Section
+    "footer.cta_title": "Pronto para o",
+    "footer.cta_title2": "próximo passo?",
   },
   en: {
     // Navigation
@@ -312,6 +323,8 @@ const translations = {
     "skills.category.back": "Backend",
     "skills.category.other": "Tools",
     "skills.no_skills_found": "No skills found.",
+    "skills.see_more": "See More",
+    "skills.see_less": "See Less",
     
     // Skill Descriptions
     "skill.html5": "Semantic structure and accessibility",
@@ -434,6 +447,11 @@ const translations = {
     "testimonial4.company": "Self-employed",
     "testimonial4.content": "Pedro is a very competent and attentive developer. His tips on good practices in TypeScript and C# were fundamental to improve my code quality. Always willing to help and share experiences.",
     
+    // Testimonial 5
+    "testimonial5.role": "Pharmacist",
+    "testimonial5.company": "Armazém Drogaria",
+    "testimonial5.content": "Pedro was essential in helping me understand and learn the systems. His patience and dedication in explaining the functionalities in a clear and objective way made the process much easier. Excellent professional!",
+    
     // FAQ Section
     "faq.badge": "FAQ",
     "faq.title": "Have any",
@@ -461,9 +479,10 @@ const translations = {
     "faq6.answer": "Yes, you will receive full access to the source code and technical documentation. The code is commented and well-structured for easy future maintenance.",
     
     // Final CTA Section
-    "final.title": "Let's create something",
-    "final.title2": "incredible together?",
+    "final.title": "Let's take your business to the",
+    "final.title2": "next level?",
     "final.description": "I'm sure we can turn your ideas into extraordinary digital solutions.",
+    "final.cta": "Get Started Now",
     
     // Contact Section
     "contact.badge": "Let's talk!",
@@ -490,6 +509,9 @@ const translations = {
     "footer.about": "About",
     "footer.projects": "Projects",
     "footer.footer_cta_description": "I'm ready to transform your ideas into reality. ✨",
+    // Footer CTA Section
+    "footer.cta_title": "Ready for the",
+    "footer.cta_title2": "next step?",
   },
 }
 
