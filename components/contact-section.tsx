@@ -148,12 +148,12 @@ export function ContactSection() {
               <div className="absolute top-0 left-2 right-2 h-0.5 rounded-t-2xl bg-linear-to-r from-primary to-secondary" />
 
               <h3 className="text-2xl font-bold mb-4 text-center">
-                🚀 Prepare-se para Escalar!
+                {t("contact.chart_title")}
               </h3>
 
               {/* Motivational message */}
               <p className="text-center text-muted-foreground mb-8 leading-relaxed">
-                Cada projeto é uma oportunidade de escalar. Com estratégia e tecnologia, transformamos ideias em resultados que impulsionam o crescimento.
+                {t("contact.chart_subtitle")}
               </p>
 
               {/* Line chart with animation */}
@@ -234,12 +234,12 @@ export function ContactSection() {
 
               {/* Labels */}
               <div className="flex justify-between text-xs text-muted-foreground mt-4 px-2">
-                <span>Hoje</span>
-                <span>1 mês</span>
-                <span>3 meses</span>
-                <span>6 meses</span>
-                <span>1 ano</span>
-                <span>Futuro</span>
+                <span>{t("contact.chart_label_today")}</span>
+                <span>{t("contact.chart_label_1m")}</span>
+                <span>{t("contact.chart_label_3m")}</span>
+                <span>{t("contact.chart_label_6m")}</span>
+                <span>{t("contact.chart_label_1y")}</span>
+                <span>{t("contact.chart_label_future")}</span>
               </div>
               </div>
             </div>

@@ -250,6 +250,15 @@ const translations = {
     "contact.location_value": "Uberlândia, MG",
     "contact.availability": "Disponibilidade",
     "contact.availability_value": "Sempre aberto a projetos",
+    // Contact Chart
+    "contact.chart_title": "🚀 Prepare-se para Escalar!",
+    "contact.chart_subtitle": "Cada projeto é uma oportunidade de escalar. Com estratégia e tecnologia, transformamos ideias em resultados que impulsionam o crescimento.",
+    "contact.chart_label_today": "Hoje",
+    "contact.chart_label_1m": "1 mês",
+    "contact.chart_label_3m": "3 meses",
+    "contact.chart_label_6m": "6 meses",
+    "contact.chart_label_1y": "1 ano",
+    "contact.chart_label_future": "Futuro",
     
     // Footer
     "footer.description": "Transformando ideias em soluções digitais inovadoras. Especialista em desenvolvimento web moderno com foco em experiência do usuário.",
@@ -503,6 +512,15 @@ const translations = {
     "contact.location_value": "Uberlândia, MG",
     "contact.availability": "Availability",
     "contact.availability_value": "Always open to projects",
+    // Contact Chart
+    "contact.chart_title": "🚀 Get Ready to Scale!",
+    "contact.chart_subtitle": "Each project is an opportunity to scale. With strategy and technology, we turn ideas into results that drive growth.",
+    "contact.chart_label_today": "Today",
+    "contact.chart_label_1m": "1 month",
+    "contact.chart_label_3m": "3 months",
+    "contact.chart_label_6m": "6 months",
+    "contact.chart_label_1y": "1 year",
+    "contact.chart_label_future": "Future",
     
     // Footer
     "footer.description": "Transforming ideas into innovative digital solutions. Expert in modern web development with a focus on user experience.",
