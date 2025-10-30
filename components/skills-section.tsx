@@ -154,9 +154,15 @@ export function SkillsSection() {
               <div className="flex justify-center mt-8">
                 <button
                   onClick={() => setIsExpanded(!isExpanded)}
-                  className="px-8 py-3 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary border border-primary/30 hover:border-primary/50 font-semibold transition-all duration-300 active:scale-95"
+                  className="group relative px-10 py-5 rounded-full font-bold text-lg transition-all duration-300 flex items-center gap-2 overflow-hidden shadow-2xl active:scale-95 cursor-pointer"
+                  style={{
+                    background: "linear-gradient(135deg, hsl(260, 75%, 60%) 0%, hsl(67, 100%, 45%) 100%)",
+                  }}
                 >
-                  {isExpanded ? t("skills.see_less") || "Ver Menos" : t("skills.see_more") || "Ver Mais"} ({isExpanded ? filteredSkills.length : `2/${filteredSkills.length}`})
+                  <span className="relative z-10 text-white">
+                    {isExpanded ? t("skills.see_less") || "Ver Menos" : t("skills.see_more") || "Ver Mais"} ({isExpanded ? filteredSkills.length : `2/${filteredSkills.length}`})
+                  </span>
+                  <div className="absolute inset-0 bg-linear-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
                 </button>
               </div>
             )}

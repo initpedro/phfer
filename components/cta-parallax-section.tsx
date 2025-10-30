@@ -70,16 +70,21 @@ export function CTAParallaxSection() {
               <span className="text-white font-semibold text-sm">{t("cta.next_level")}</span>
             </div>
 
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 text-balance">
-              {t("cta.ready_to_level_up")} <br className="hidden md:block" />
-              {t("cta.ready_to_level_up_question")}{" "}
-              <span className="relative inline-block">
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 text-balance">
+              <span className="bg-linear-to-r from-white via-white to-white/90 bg-clip-text text-transparent">
+                {t("cta.ready_to_level_up")}
+              </span>{" "}
+              <br className="hidden md:block" />
+              <span className="bg-linear-to-r from-white via-white to-white/90 bg-clip-text text-transparent">
+                {t("cta.ready_to_level_up_question")}
+              </span>{" "}
+              <span className="relative inline-block bg-linear-to-r from-cyan-300 via-blue-300 to-cyan-200 bg-clip-text text-transparent">
                 {t("cta.ready_to_level_up_answer")}
-                <span className="absolute -bottom-2 left-0 right-0 h-1 bg-white/30 rounded-full"></span>
+                <span className="absolute -bottom-2 left-0 right-0 h-1 bg-linear-to-r from-cyan-300 to-blue-300 rounded-full"></span>
               </span>
             </h2>
 
-            <p className="text-lg md:text-xl text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-white/95 mb-12 max-w-2xl mx-auto leading-relaxed drop-shadow-sm">
               {t("cta.transform_ideas")}
             </p>
           </div>
@@ -95,10 +100,10 @@ export function CTAParallaxSection() {
                 <div key={index} className="flex items-center">
                   {/* Stat content */}
                   <div className="px-8 md:px-12 py-6 text-center">
-                    <div className="text-4xl md:text-5xl font-bold text-white mb-2">
+                    <div className="text-4xl md:text-5xl font-bold bg-linear-to-br from-white via-cyan-100 to-blue-100 bg-clip-text text-transparent mb-2 drop-shadow-sm">
                       {stat.number}
                     </div>
-                    <div className="text-base md:text-lg text-white/80 font-medium">
+                    <div className="text-base md:text-lg text-white font-medium drop-shadow-sm">
                       {stat.label}
                     </div>
                   </div>
@@ -121,9 +126,16 @@ export function CTAParallaxSection() {
               href="https://wa.me/5534998731732?text=Olá, Pedro! Vim pelo seu Website e gostaria de ter seu contato!"
               target="_blank"
               rel="noopener noreferrer"
-              className="group px-8 py-4 rounded-full bg-white text-primary font-bold text-lg transition-all duration-300 hover:bg-gray-100 flex items-center justify-center gap-2"
+              className="group relative px-10 py-5 rounded-full font-bold text-lg transition-all duration-300 flex items-center justify-center gap-2 overflow-hidden shadow-2xl"
+              style={{
+                background: "linear-gradient(135deg, #25D366 0%, #128C7E 100%)",
+              }}
             >
-              {t("cta.open_whatsapp")}
+              <span className="relative z-10 text-white flex items-center gap-2">
+                {t("cta.open_whatsapp")}
+                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </span>
+              <div className="absolute inset-0 bg-linear-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
             </a>
           </div>
         </div>

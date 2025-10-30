@@ -113,12 +113,19 @@ export function ExperienceSection() {
         </div>
 
         <div className="text-center mt-16">
-          <Button size="lg" className="rounded-full" asChild>
-            <a href="https://drive.google.com/drive/folders/1uxyglnsnpw3eLQLCb_xpqVoffd-lLT3I" target="_blank" rel="noopener noreferrer">
-              <Download className="mr-2 h-4 w-4" />
-              {t("experience.resume")}
-            </a>
-          </Button>
+          <a
+            href="https://drive.google.com/drive/folders/1uxyglnsnpw3eLQLCb_xpqVoffd-lLT3I"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-2 relative px-10 py-5 rounded-full font-bold text-lg transition-all duration-300 overflow-hidden shadow-2xl cursor-pointer active:scale-95"
+            style={{
+              background: "linear-gradient(135deg, hsl(260, 75%, 60%) 0%, hsl(67, 100%, 45%) 100%)",
+            }}
+          >
+            <Download className="h-5 w-5 group-hover:animate-bounce" />
+            <span className="relative z-10 text-white">{t("experience.resume")}</span>
+            <div className="absolute inset-0 bg-linear-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+          </a>
         </div>
       </div>
     </section>

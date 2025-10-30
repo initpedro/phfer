@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Github, Linkedin, Mail, MessageCircle } from "lucide-react"
+import { Github, Linkedin, Mail, MessageSquare, Instagram, Send } from "lucide-react"
 import { useLanguage } from "@/components/language-provider"
 
 export function Footer() {
@@ -178,7 +178,25 @@ export function Footer() {
                 className="p-2 rounded-lg bg-muted/50 hover:bg-primary/20 text-muted-foreground hover:text-primary transition-all duration-300"
                 title="Discord"
               >
-                <MessageCircle className="h-5 w-5" />
+                <MessageSquare className="h-5 w-5" />
+              </a>
+              <a
+                href="https://instagram.com/initpedro"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg bg-muted/50 hover:bg-primary/20 text-muted-foreground hover:text-primary transition-all duration-300"
+                title="Instagram"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a
+                href="https://wa.me/5534998731732?text=Olá, Pedro! Vim pelo seu Website e gostaria de ter seu contato!"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg bg-muted/50 hover:bg-primary/20 text-muted-foreground hover:text-primary transition-all duration-300"
+                title="WhatsApp"
+              >
+                <Send className="h-5 w-5" />
               </a>
             </div>
           </div>

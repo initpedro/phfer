@@ -190,38 +190,20 @@ export function ProjectsSection() {
 
         {/* CTA Button */}
         <div className="mt-20 flex justify-center">
-          <style>{`
-            @keyframes gradientShift {
-              0% {
-                background-position: 0% 50%;
-                filter: brightness(1);
-              }
-              50% {
-                background-position: 100% 50%;
-                filter: brightness(0.85);
-              }
-              100% {
-                background-position: 0% 50%;
-                filter: brightness(1);
-              }
-            }
-            .gradient-animate {
-              background: linear-gradient(90deg, 
-                hsl(260, 75%, 50%), 
-                hsl(67, 100%, 30%), 
-                hsl(260, 75%, 50%));
-              background-size: 200% 200%;
-              animation: gradientShift 3s ease infinite;
-            }
-          `}</style>
           <a
             href="https://github.com/initpedro"
             target="_blank"
             rel="noopener noreferrer"
-            className="group px-8 py-4 rounded-full bg-linear-to-r from-primary to-secondary text-primary-foreground font-semibold transition-all duration-300 hover:gradient-animate flex items-center gap-3"
+            className="group relative px-10 py-5 rounded-full font-bold text-lg transition-all duration-300 flex items-center gap-2 overflow-hidden shadow-2xl"
+            style={{
+              background: "linear-gradient(135deg, #333 0%, #171717 100%)",
+            }}
           >
-            <span>{t("projects.github")}</span>
-            <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            <span className="relative z-10 text-white flex items-center gap-2">
+              {t("projects.github")}
+              <Code2 className="h-5 w-5 group-hover:scale-110 transition-transform" />
+            </span>
+            <div className="absolute inset-0 bg-linear-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
           </a>
         </div>
       </div>
